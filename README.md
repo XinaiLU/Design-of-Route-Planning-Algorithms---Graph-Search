@@ -1,4 +1,4 @@
-## Lab 6: Design and Implementation of a Flight Route Planning System
+## Design and Implementation of a Flight Route Planning System
 ---
 
 ## Experiment Objective
@@ -6,6 +6,7 @@
 Utilize basic knowledge of graph structures, adjacency matrices, and adjacency lists to construct a flight route graph for XM Airlines based on existing route data. On this foundation, design a simple flight route planning system. This system can provide different flight route solutions according to user needs.
 
 ![image](https://github.com/user-attachments/assets/f0bd71b1-a5ab-4bba-90aa-5e54eec428a7)
+<img width="375" alt="c714443de9484cf62c99c60f3c3f86a" src="https://github.com/user-attachments/assets/e1fae6cd-e61c-44d1-a4ec-a37b1651e774">
 
 ### System Features
 
@@ -89,6 +90,7 @@ void unmarkPath(int node) {
     // Logic to unmark routes
 }
 ```
+
 <img width="368" alt="image" src="https://github.com/user-attachments/assets/8c3c4618-ed32-4e88-b305-57507b44893f">
 
 **Diagram**: *Function to Unmark Routes During Backtracking*
@@ -105,6 +107,7 @@ All paths from Feature 3 are stored and analyzed for total flight and layover ti
 // Code snippet for time calculation
 int totalTime = calculateTime(path);
 ```
+
 <img width="406" alt="image" src="https://github.com/user-attachments/assets/4d1892a6-6665-4a0e-a87a-3a0fa9c3b5c1">
 
 ### Feature 5: Time-Constrained Routes
@@ -117,6 +120,7 @@ if (departure >= minTime && departure <= maxTime) {
     // Include the path in results
 }
 ```
+
 <img width="411" alt="image" src="https://github.com/user-attachments/assets/a025bb53-3b8e-46e7-90ef-9bc12a5dc7dd">
 
 **Diagram**: *Condition to Enforce Departure Time Limits*
@@ -133,6 +137,7 @@ int minFare = findLowestFare(routes);
 ```
 
 ---
+
 <img width="410" alt="image" src="https://github.com/user-attachments/assets/3414ce19-4af0-4c1b-82d8-e1802e84cd24">
 
 ## Main Function
@@ -159,6 +164,7 @@ int main() {
 ```
 Airport Sequence: 3 -> 4 -> 5
 ```
+
 <img width="364" alt="image" src="https://github.com/user-attachments/assets/41f3d4b2-7c44-4cac-a032-7046656c4522">
 
 
@@ -177,33 +183,42 @@ Airport Sequence: 3 -> 4 -> 5
 ```
 Airport Sequence: 3 -> 5 -> 4
 ```
+
 <img width="416" alt="image" src="https://github.com/user-attachments/assets/9d76d21b-6e84-475d-bb9f-571c6a924410">
 
 ### Feature 3: Direct/One-Stop Routes
 
 **Input**: `48 49`  
 **Output**: All routes from Airport 48 to 49 saved in `result.txt`.
+
 <img width="272" alt="image" src="https://github.com/user-attachments/assets/83448a42-7c7f-4c35-a2a8-84c214d13a00">
+
 <img width="307" alt="image" src="https://github.com/user-attachments/assets/adb9b96b-3baa-413e-a8b3-7d85af2fc3dc">
 
 ### Feature 4: Shortest Flight Time
 
 **Input**: `49 50`  
 **Output**: Flight details including ID, departure, and arrival times.
+
 <img width="335" alt="image" src="https://github.com/user-attachments/assets/a8f708ee-8f54-4277-bcad-540bb1b04819">
 
+
 - **Validation**: Verified 200-minute total time matches expected results.
+- 
 <img width="346" alt="image" src="https://github.com/user-attachments/assets/d7ed7a24-3729-470f-afc2-25228aaf9589">
 
 ### Feature 5: Time-Constrained Routes
 
 **Input**: `49 50 201705070000 201705091000`  
 **Output**: All valid routes within the specified time window, saved to a file.
+
 <img width="226" alt="image" src="https://github.com/user-attachments/assets/92995498-f678-4e59-ae4f-fdff93574e46">
+
 <img width="322" alt="image" src="https://github.com/user-attachments/assets/1d61885f-7a09-4b9d-bbe2-56a98de151fe">
 
 ### Feature 6: Minimum Fare
 
 **Input**: `50 25 201705051200 201705051400`  
 **Output**: Minimum fare route between Airport 50 and 25 within the given time range.
+
 <img width="323" alt="image" src="https://github.com/user-attachments/assets/8674a067-168b-4cc9-828b-c442dda8a1aa">
